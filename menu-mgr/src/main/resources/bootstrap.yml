@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: menu-mgr
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+
+

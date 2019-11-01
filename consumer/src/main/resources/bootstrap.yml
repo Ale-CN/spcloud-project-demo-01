@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: consumer #对应的配置文件名称
+      profile: dev
+      label: master #git仓库分支名
+      discovery:
+        enabled: true
+        serviceId: config-server #连接的配置中心名称

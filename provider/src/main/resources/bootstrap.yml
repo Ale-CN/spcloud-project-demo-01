@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: provider
+  profiles:
+    active: dev # 配置文件-dev
+  cloud:
+    config:
+      name: provider-config # 当前服务注册在 Eureka 上的名称，与远程仓库的配置文件名对应。
+      label: master # 读取分支
+      discovery:
+        service-id: config-server # 配置中心服务器的 application.name
+        enabled: true
+eureka:
+ client:
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka/
+  instance:
+      prefer-ip-address: true
