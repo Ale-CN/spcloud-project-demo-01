@@ -1,7 +1,7 @@
 package com.ale.utils;
 
-import com.ale.bean.bean.Menu;
-import com.ale.bean.bean.MenuVO;
+import com.ale.bean.Menu;
+import com.ale.bean.MenuVO;
 
 import java.util.List;
 

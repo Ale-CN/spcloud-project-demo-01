@@ -15,6 +15,9 @@
         <module>provider</module>
         <module>menu-mgr</module>
         <module>consumer</module>
+        <module>user-provider</module>
+        <module>order-provider</module>
+        <module>zuul</module>
     </modules>
     <!-- 引入Spring Boot的依赖 -->
     <parent>

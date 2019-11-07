@@ -1,4 +1,4 @@
-package com.ale.bean.bean;
+package com.ale.bean;
 
 import lombok.Data;
 

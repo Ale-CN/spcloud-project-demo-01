@@ -7,8 +7,11 @@
       <module fileurl="file://$PROJECT_DIR$/consumer/consumer.iml" filepath="$PROJECT_DIR$/consumer/consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/menu-mgr/menu-mgr.iml" filepath="$PROJECT_DIR$/menu-mgr/menu-mgr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-provider/order-provider.iml" filepath="$PROJECT_DIR$/order-provider/order-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/spcloud-project-demo-01.iml" filepath="$PROJECT_DIR$/spcloud-project-demo-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-provider/user-provider.iml" filepath="$PROJECT_DIR$/user-provider/user-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
     </modules>
   </component>
 </project>

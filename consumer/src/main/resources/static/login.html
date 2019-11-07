@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,11 +22,12 @@
             </div>
         </div>
         <div class="layui-form-item" pane="">
-            <label class="layui-form-label">单选框</label>
-            <div class="layui-input-block">
-                <input type="radio" name="type" value="user" title="用户" checked="">
-                <input type="radio" name="type" value="admin" title="管理员">
-            </div>
+            <input type="text" name="errMsg" th:value="${errMsg}"  class="layui-input"/>
+            <!--<label class="layui-form-label">单选框</label>-->
+            <!--<div class="layui-input-block">-->
+                <!--<input type="radio" name="type" value="user" title="用户" checked="">-->
+                <!--<input type="radio" name="type" value="admin" title="管理员">-->
+            <!--</div>-->
         </div>
         <div class="layui-form-item">
             <button class="layui-btn" lay-submit="" lay-filter="demo2" style="margin-left: 160px;">登陆</button>
@@ -44,7 +46,7 @@
                     return '用户名不能为空';
                 }
             }
-            ,password: [/(.+){6,12}$/, '密码必须6到12位']
+           // ,password: [/(.+){6,12}$/, '密码必须6到12位']
         });
 
     });

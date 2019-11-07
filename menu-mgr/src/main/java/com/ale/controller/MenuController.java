@@ -19,19 +19,29 @@ public class MenuController {
 
     @RequestMapping("/findAll/{index}/{limit}")
     public MenuVO findAll(@PathVariable("index") int index, @PathVariable("limit") int limit) {
-        int code = 200;
+        int code = 0;
         String msg = "";
         int count = menuDao.count();
         return VOutils.trans2VO(code, msg, count, menuDao.findAll(index, limit));
     }
 
     @RequestMapping("/findById/{id}")
-    public MenuVO findById(@PathVariable("id") long id) {
-        int code = 200;
-        String msg = "";
-        int count = 1;
-        List<Menu> menuList = new ArrayList<>();
-        menuList.add(menuDao.findById(id));
-        return VOutils.trans2VO(code, msg, count, menuList);
+    public Menu findById(@PathVariable("id") long id) {
+        return menuDao.findById(id);
+    }
+
+    @DeleteMapping("/deleteById/{id}")
+    public void deleteById(@PathVariable("id") long id) {
+        menuDao.deleteById(id);
+    }
+
+    @PostMapping("/save")
+    public void save(@RequestBody Menu menu) {
+        menuDao.save(menu);
+    }
+
+    @PutMapping("/update")
+    public void update(@RequestBody Menu menu) {
+        menuDao.update(menu);
     }
 }

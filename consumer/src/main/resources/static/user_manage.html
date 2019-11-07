@@ -11,6 +11,7 @@
 
     <table class="layui-hide" id="test" style="width: 300px" lay-filter="test"></table>
     <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="update">修改</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
     </script>
     <script th:src="@{/layui/layui.js}" charset="utf-8"></script>
@@ -24,14 +25,14 @@
                 ,title: '用户列表'
                 ,cols: [
                     [
-                        {field:'id', width:70, title: '编号', sort: true}
+                        {field:'id', width:50, title: '编号', sort: true}
                         ,{field:'username', width:100, title: '用户名'}
                         ,{field:'nickname', width:100, title: '昵称'}
-                        ,{field:'gender', width:70, title: '性别'}
+                        ,{field:'gender', width:50, title: '性别'}
                         ,{field:'telephone', width:160, title: '联系电话'}
                         ,{field:'registerdate', width:220, title: '注册日期'}
                         ,{field:'address', width:200, title: '地址'}
-                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:80}
+                        ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:120}
                 ]
                 ]
                 ,page: true
@@ -45,6 +46,8 @@
                         window.location.href="/user/deleteById/"+data.id;
                         layer.close(index);
                     });
+                }else if(obj.event === 'update'){
+                    window.location.href = "/user/findById/" + data.id;
                 }
             });
         });

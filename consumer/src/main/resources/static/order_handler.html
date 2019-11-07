@@ -8,7 +8,7 @@
 </head>
 <body class="layui-layout-body">
 <div class="layui-container" style="margin-top: 50px;width: 750px;width: 1070px">
-
+    <input type="hidden" id="aid" name="aid" th:value="${session.USERS.id}"/>
     <table class="layui-hide" id="test" style="width: 300px" lay-filter="test"></table>
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-xs" lay-event="send">已派送</a>
@@ -60,9 +60,10 @@
 
             //监听行工具事件
             table.on('tool(test)', function(obj){
+                var aid = document.getElementById("aid").value;
                 var data = obj.data;
                 if(obj.event === 'send'){
-                    window.location.href="/order/updateState/"+data.id+"/1";
+                    window.location.href="/order/updateState/"+data.id+"/"+ aid +"/1";
                 }
             });
         });
